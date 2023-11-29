@@ -9,8 +9,14 @@ function App() {
           One of my favourite hobbies is playing Football <br/>
           I enjoy it because I just love being active outside! <br/>
         </p>
+        <p>
+          Hi, I'm Penny. <br/>
+          One of my favourite hobbies is crocheting. <br/>
+          I enjoy it because it's relaxing and creative! <br/>
+      </p> 
       </header>
-    </div>
+         
+      </div>
   );
 }
 
