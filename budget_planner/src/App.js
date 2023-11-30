@@ -14,6 +14,11 @@ function App() {
           One of my favourite hobbies is crocheting. <br/>
           I enjoy it because it's relaxing and creative! <br/>
       </p> 
+      <p>
+          Hiya, I'm Naomi. <br/>
+          One of my favourite hobbies is pottery. <br/>
+          I enjoy it because it is very calming and a good oppurtunity to be creative. <br/>
+      </p> 
       </header>
          
       </div>
