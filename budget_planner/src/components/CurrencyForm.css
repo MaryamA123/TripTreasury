@@ -1,8 +1,19 @@
+
+.formContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: lightcoral;
+    width: 90%;
+
+}
+
 input[type=number]{
     color: black;
     border: 2px solid black;
+    
 }
-
 .submitButton{
     background-color: green;
 }
+

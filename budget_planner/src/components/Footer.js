@@ -1,7 +1,7 @@
 import "./Footer.css"
 import { Link } from 'react-router-dom';
-import {FaBars, FaTimes} from 'react-icons/fa';
-import {useState} from 'react'
+// import {FaBars, FaTimes} from 'react-icons/fa';
+// import {useState} from 'react'
 
 const Footer = () => {
 

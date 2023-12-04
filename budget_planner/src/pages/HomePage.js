@@ -7,7 +7,7 @@ import "./HomePage.css"
 function HomePage() {
   return (
     <>
-      <Heading Heading="Welcome"></Heading>
+      <Heading Heading="Trip Treasury"></Heading>
       <img src={image} alt="pineappleimage" className="pineappleimage"/>
       <CurrencyForm />
       <Footer></Footer>
