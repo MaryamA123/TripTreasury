@@ -1,12 +1,15 @@
 import BurgerMenu from "./BurgerMenu";
 import "./Heading.css"
+import logo from "../Images/ttlogo.png"
 
 
 function Heading(props) {
     return (
-      <div>
+      <div className="heading">
       <BurgerMenu/>
-        <h1 className="heading">{props.Heading}</h1>
+        <img src={logo} alt="logo" className="logo"/>
+        <h1 className="logoWithText">{props.Heading}</h1>
+        
       </div>
     );
   };

@@ -54,9 +54,9 @@ const CurrencyForm = () => {
 
   return (
     <>
-      {/* <h1>Currency Conversion Form to go here</h1> */}
-      <div className="formContainer">
-        <form onSubmit={handleSubmit}>
+      <div>
+        <form onSubmit={handleSubmit} className="form-inline">
+        <div className="form-group">
           <label>Choose your base Currency:</label>
           <select
             id="currency1"
@@ -75,6 +75,8 @@ const CurrencyForm = () => {
             <option value="CHF">CHF</option>
             <option value="HKD">HKD</option>
           </select>
+          </div>
+          <div className="form-group">
 
           <label>Choose your Second Currency:</label>
           <select
@@ -94,7 +96,8 @@ const CurrencyForm = () => {
             <option value="CHF">CHF</option>
             <option value="HKD">HKD</option>
           </select>
-
+          </div>
+          <div className="form-group">
           <label>Please enter amount you wish to convert:</label>
           <input
             type="number"
@@ -103,7 +106,8 @@ const CurrencyForm = () => {
             value={formData.amount}
             onChange={handleInputChange}
           ></input>
-
+          </div>
+          <div className="form-group">
           <label>Length of trip (in days):</label>
           <input
             type="number"
@@ -112,12 +116,15 @@ const CurrencyForm = () => {
             value={formData.totalDays}
             onChange={handleInputChange}
           ></input>
+          </div>
+          <div className="form-group">
           <input type="submit" value="Submit" className="submitButton"></input>
+          </div>
         </form>
       </div>
 
       {showDailyBudget && dailyBudget !== null && (
-        <div>
+        <div className="dailyBudget">
           <h2>
             Your daily budget is {dailyBudget} {formData.currency2}.
           </h2>

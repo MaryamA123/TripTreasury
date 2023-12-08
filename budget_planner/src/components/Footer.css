@@ -7,10 +7,15 @@
     align-items: center ;
     padding: 1rem;
     bottom: 0;
-    background-color: lightblue;
-    position: fixed;
+    background-color: #05668d;
+   
 }
 
 li {
     list-style-type: none;
+    color: #f0f3bd;
+  }
+
+  a:hover{
+    color: #02c39a;
   }

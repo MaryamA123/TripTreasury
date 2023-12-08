@@ -1,6 +1,12 @@
-.pineappleimage{
+
+.imageContainer{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.holidayImages{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 40%;
+    width: 32%;
 }
