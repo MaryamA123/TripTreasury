@@ -16,6 +16,7 @@ function HomePage() {
       <img src={canada} alt="canada" className="holidayImages"/>
       <img src={japan} alt="japan" className="holidayImages"/>
       </div>
+      <h2>Your adventure starts here...</h2>
       <CurrencyForm />
       <Footer></Footer>
     </>
