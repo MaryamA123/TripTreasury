@@ -6,14 +6,11 @@ import './AboutUsPage.css';
 
 const AboutUsPage = () => {
     return (
-<<<<<<< Updated upstream
-      <div>
-=======
+
       <div className="container">
 
         <div className="content">
 
->>>>>>> Stashed changes
         <Heading Heading="About us"/>
      
         <h2>
@@ -56,6 +53,7 @@ const AboutUsPage = () => {
           adventure!
         </p>
         </div>
+        
         <Footer/>
       </div>
     );
