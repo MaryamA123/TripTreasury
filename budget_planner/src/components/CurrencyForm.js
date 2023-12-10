@@ -78,7 +78,7 @@ const CurrencyForm = () => {
           </div>
           <div className="form-group">
 
-          <label>Choose your Second Currency:</label>
+          <label>Choose your second Currency:</label>
           <select
             id="currency2"
             name="currency2"
