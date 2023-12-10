@@ -7,7 +7,9 @@ function Heading(props) {
     return (
       <div className="heading">
       <BurgerMenu/>
+      <a href="/">
         <img src={logo} alt="logo" className="logo"/>
+      </a>
         <h1 className="logoWithText">{props.Heading}</h1>
         
       </div>
