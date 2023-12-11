@@ -1,3 +1,16 @@
 .heading{
-    background-color: lightblue;
+    background-color: #05668d;
+}
+
+.logoWithText{
+    display: inline-block;
+}
+
+.logo{
+    height: 100px;
+    vertical-align: middle;
+}
+h1{
+    vertical-align: middle;
+    padding-left: 40px;
 }

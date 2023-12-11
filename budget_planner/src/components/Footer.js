@@ -1,12 +1,8 @@
 import "./Footer.css"
 import { Link } from 'react-router-dom';
-import {FaBars, FaTimes} from 'react-icons/fa';
-import {useState} from 'react'
+
 
 const Footer = () => {
-
-// const [click,setClick] = useState(false)
-// const handleClick = () => setClick(!click)
 
     return ( 
         <div className='footer'>
@@ -22,15 +18,6 @@ const Footer = () => {
         <li>
             <Link to='/contact'>Contact</Link>
         </li>
-
-        
-        {/* <div className='hamburger' onClick={handleClick}>
-            {click ? (<FaTimes size={20} style={{color: "white"}}/>) : (<FaBars size={20} style={{color: "white"}}/>) } */}
-
-        
-
-        {/* </div> */}
-
         </div>
      );
 }

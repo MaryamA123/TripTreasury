@@ -1,3 +1,4 @@
+
 import Footer from "../components/Footer";
 import image from "../Images/pineapples.webp";
 import Heading from "../components/Heading";
@@ -7,9 +8,11 @@ import './AboutUsPage.css';
 const AboutUsPage = () => {
     return (
 
+
       <div className="container">
 
         <div className="content">
+
 
         <Heading Heading="About us"/>
      
