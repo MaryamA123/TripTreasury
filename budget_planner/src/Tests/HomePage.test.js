@@ -9,8 +9,8 @@ describe('Homepage renders', ()=>{
             <HomePage />
           </MemoryRouter>
         );
-        const linkElement = screen.getByText(/your adventure starts here/i);
-        expect(linkElement).toBeInTheDocument();
+        const text = screen.getByText(/your adventure starts here/i);
+        expect(text).toBeInTheDocument();
       });
       test("Renders heading", () => {
         render(
@@ -18,8 +18,8 @@ describe('Homepage renders', ()=>{
             <HomePage />
           </MemoryRouter>
         );
-        const headingElement = screen.getByText("Trip Treasury");
-        expect(headingElement).toBeInTheDocument();
+        const headingText = screen.getByText("Currency Converter & Daily Bugdet");
+        expect(headingText).toBeInTheDocument();
       });
       
       test("Renders images", () => {
@@ -42,8 +42,8 @@ describe('Homepage renders', ()=>{
             <HomePage />
           </MemoryRouter>
         );
-        const headingElement = screen.getByText("Submit");
-        expect(headingElement).toBeInTheDocument();
+        const button = screen.getByText("Submit");
+        expect(button).toBeInTheDocument();
       });
 
 })

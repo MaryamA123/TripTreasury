@@ -54,13 +54,22 @@ const CurrencyForm = () => {
     }
   };
   const dailyRate = async () => {
-    const currentRate = await makeApiCall(
+  try{
+    const rate = await makeApiCall(
       apiKey,
       formData.currency1,
       formData.currency2
     );
-
-    setExchangeRate(currentRate.toFixed(2));
+    if (rate !== undefined){
+      const currentRate = rate.toFixed(2)
+      setExchangeRate(currentRate);
+    } 
+    else{
+      console.log("Error: Conversion rate is undefined")
+    }
+   } catch(error){
+      console.error("Error getting conversion rate:", error)
+    }
   };
 
   return (
