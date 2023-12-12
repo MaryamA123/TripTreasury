@@ -10,13 +10,13 @@ import "./HomePage.css"
 function HomePage() {
   return (
     <>
-      <Heading Heading="Trip Treasury"></Heading>
+      <Heading Heading="Currency Converter & Daily Bugdet"></Heading>
       <div className="imageContainer">
       <img src={bora} alt="bora-bora" className="holidayImages"/>
       <img src={canada} alt="canada" className="holidayImages"/>
       <img src={japan} alt="japan" className="holidayImages"/>
       </div>
-      <h2>Your adventure starts here...</h2>
+      <h3>Your adventure starts here...</h3>
       <CurrencyForm />
       <Footer></Footer>
     </>

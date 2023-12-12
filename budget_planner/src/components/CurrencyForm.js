@@ -12,6 +12,7 @@ const CurrencyForm = () => {
 
   const [showDailyBudget, setShowDailyBudget] = useState(false);
   const [dailyBudget, setDailyBudget] = useState(null);
+  const [exchangeRate, setExchangeRate] = useState(null);
 
   const apiKey = "fca_live_dxIYuhTXOQFtljZCfSXinVRkl11qqPzSwTh9HNGP";
 
@@ -32,6 +33,7 @@ const CurrencyForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setShowDailyBudget(true);
+    dailyRate();
     calculateAndSetDailyBudget();
   };
 
@@ -51,84 +53,107 @@ const CurrencyForm = () => {
       console.error("Error calculating daily budget:", error);
     }
   };
+  const dailyRate = async () => {
+  try{
+    const rate = await makeApiCall(
+      apiKey,
+      formData.currency1,
+      formData.currency2
+    );
+    if (rate !== undefined){
+      const currentRate = rate.toFixed(2)
+      setExchangeRate(currentRate);
+    } 
+    else{
+      console.log("Error: Conversion rate is undefined")
+    }
+   } catch(error){
+      console.error("Error getting conversion rate:", error)
+    }
+  };
 
   return (
     <>
       <div>
         <form onSubmit={handleSubmit} className="form-inline">
-        <div className="form-group">
-          <label>Choose your base Currency:</label>
-          <select
-            id="currency1"
-            name="currency1"
-            value={formData.currency1}
-            onChange={handleInputChange}
-          >
-            <option value="GBP">GBP</option>
-            <option value="USD">USD</option>
-            <option value="EUR">EUR</option>
-            <option value="CAD">CAD</option>
-            <option value="JPY">JPY</option>
-            <option value="INR">INR</option>
-            <option value="THB">THB</option>
-            <option value="DKK">DKK</option>
-            <option value="CHF">CHF</option>
-            <option value="HKD">HKD</option>
-          </select>
+          <div className="form-group">
+            <label>Choose your base Currency:</label>
+            <select
+              id="currency1"
+              name="currency1"
+              value={formData.currency1}
+              onChange={handleInputChange}
+            >
+              <option value="GBP">GBP</option>
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="CAD">CAD</option>
+              <option value="JPY">JPY</option>
+              <option value="INR">INR</option>
+              <option value="THB">THB</option>
+              <option value="DKK">DKK</option>
+              <option value="CHF">CHF</option>
+              <option value="HKD">HKD</option>
+            </select>
           </div>
           <div className="form-group">
-
-          <label>Choose your second Currency:</label>
-          <select
-            id="currency2"
-            name="currency2"
-            value={formData.currency2}
-            onChange={handleInputChange}
-          >
-            <option value="GBP">GBP</option>
-            <option value="USD">USD</option>
-            <option value="EUR">EUR</option>
-            <option value="CAD">CAD</option>
-            <option value="JPY">JPY</option>
-            <option value="INR">INR</option>
-            <option value="THB">THB</option>
-            <option value="DKK">DKK</option>
-            <option value="CHF">CHF</option>
-            <option value="HKD">HKD</option>
-          </select>
+            <label>Choose your second Currency:</label>
+            <select
+              id="currency2"
+              name="currency2"
+              value={formData.currency2}
+              onChange={handleInputChange}
+            >
+              <option value="GBP">GBP</option>
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="CAD">CAD</option>
+              <option value="JPY">JPY</option>
+              <option value="INR">INR</option>
+              <option value="THB">THB</option>
+              <option value="DKK">DKK</option>
+              <option value="CHF">CHF</option>
+              <option value="HKD">HKD</option>
+            </select>
           </div>
           <div className="form-group">
-          <label>Please enter amount you wish to convert:</label>
-          <input
-            type="number"
-            min={"1"}
-            name="amount"
-            value={formData.amount}
-            onChange={handleInputChange}
-          ></input>
+            <label>Please enter amount you wish to convert:</label>
+            <input
+              type="number"
+              min={"1"}
+              name="amount"
+              value={formData.amount}
+              onChange={handleInputChange}
+            ></input>
           </div>
           <div className="form-group">
-          <label>Length of trip (in days):</label>
-          <input
-            type="number"
-            min={"1"}
-            name="totalDays"
-            value={formData.totalDays}
-            onChange={handleInputChange}
-          ></input>
+            <label>Length of trip (in days):</label>
+            <input
+              type="number"
+              min={"1"}
+              name="totalDays"
+              value={formData.totalDays}
+              onChange={handleInputChange}
+            ></input>
           </div>
           <div className="form-group">
-          <input type="submit" value="Submit" className="submitButton"></input>
+            <input
+              type="submit"
+              value="Submit"
+              className="submitButton"
+            ></input>
           </div>
         </form>
       </div>
 
-      {showDailyBudget && dailyBudget !== null && (
+      {showDailyBudget && dailyBudget && exchangeRate !== null && (
         <div className="dailyBudget">
-          <h2>
-            Your daily budget is {dailyBudget} {formData.currency2}.
-          </h2>
-          <h3>Have a wonderful trip and safe travels!</h3>
+          <h3>
+            The current conversion rate is 1.00 { formData.currency1} to {exchangeRate} {formData.currency2}.
+            <br /><br/>
+            Your daily budget is {dailyBudget} {formData.currency2}.<br /><br/>
+            Have a wonderful trip and safe travels! 
+          </h3>
         </div>
       )}
     </>
