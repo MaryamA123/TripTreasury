@@ -3,6 +3,7 @@ import Heading from "../components/Heading"
 import dubai from "../Images/dubai.jpeg";
 import thailand from "../Images/Thailand.jpeg";
 import bali from "../Images/Bali.jpeg";
+import "./InspirePage.css"
 
 
 function InspirePage() {

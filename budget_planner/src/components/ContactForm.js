@@ -3,20 +3,29 @@ import "./ContactForm.css"
 
 
 const ContactForm = () => {
-    return ( 
-        <div className="form">
-        <form>
-            <label>Name</label>
-            <input type='text'></input>
-            <label>Email</label>
-            <input type='email'></input>
-            <label>Details</label>
-           <textarea rows='6' placeholder="Please add your feedback here"></textarea>
-           <button className="btn">Submit</button>
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      // Handle form submission logic here
+      alert('Form submitted!');
+    };
+  
+    return (
+      <div className="container">
+        <h2>Contact Us</h2>
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+  
+          <label htmlFor="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+  
+          <label htmlFor="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+  
+          <button type="submit">Submit</button>
         </form>
-
-        </div>
-     );
-}
- 
+      </div>
+    );
+  };
+  
 export default ContactForm;

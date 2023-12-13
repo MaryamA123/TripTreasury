@@ -7,22 +7,25 @@
     max-width: 100%;
     background-color: #f0f3bd;;
     border: 1px solid #05668d;
+    height: 5rem;
 }
 .form-group{
     display: flex;
     align-items: center;
+    margin: auto;
 }
 
 label{
     /* background-color: aquamarine; */
     padding-right: 5px;
+    margin: auto;
   
 }
 
 select{
     width: 75px;
     height: 25px;
-
+    margin: auto;
 }
 
 input[type=number]{
@@ -30,12 +33,14 @@ input[type=number]{
     border: 1px solid grey;
     border-radius: 4px;
     height: 7px;
-    width: 30px;
+    width: 50px;
+    margin: auto;
 }
 
 .submitButton{
     background-color: #00A896;
     border-radius: 4px;
+    margin: auto;
 }
 
 .submitButton:hover{

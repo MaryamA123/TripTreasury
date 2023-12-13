@@ -1,5 +1,6 @@
 .heading{
     background-color: #05668d;
+    font-family: 'bangers';
 }
 
 .logoWithText{
@@ -7,7 +8,7 @@
 }
 
 .logo{
-    height: 100px;
+    height: 80px;
     vertical-align: middle;
 }
 h1{

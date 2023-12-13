@@ -7,7 +7,6 @@ const ContactPage = () => {
     return (
       <div>
         <Heading Heading="Contact Us"></Heading>
-        <p>We would love to hear from you!</p>
         <ContactForm/>
         <Footer/>
       </div>
