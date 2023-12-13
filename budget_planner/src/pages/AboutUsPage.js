@@ -8,13 +8,11 @@ import './AboutUsPage.css';
 const AboutUsPage = () => {
     return (
 
-
-      <div className="container">
-
-        <div className="content">
-
+<>
 
         <Heading Heading="About us"/>
+
+        <div className="content">
      
         <h2>
           Welcome to Trip Treasury, where budgeting for your dream holiday is done for you!
@@ -27,12 +25,18 @@ const AboutUsPage = () => {
 
         <img src={image} alt="pineappleimage" className="pineappleimage"/>
 
-        <ul>
-          <li>Penny - The crochet connoisseur</li>
-          <li>Asia - The skating sensation</li>
-          <li>Naomi - The pottery pro</li>
-          <li>Maryam - Our football enthusiast</li>
-        </ul>
+        <p>
+          Penny - The crochet connoisseur
+          <br></br>
+          <br></br>
+          Asia - The skating sensation
+          <br></br>
+          <br></br>
+          Naomi - The pottery pro
+          <br></br>
+          <br></br>
+          Maryam - Our football enthusiast
+          </p>
 
         <p>
           Our diverse interests come together to form the heart of Trip Treasury. We believe in the power of combining
@@ -57,8 +61,9 @@ const AboutUsPage = () => {
         </p>
         </div>
         
+
         <Footer/>
-      </div>
+        </>
     );
   };
   

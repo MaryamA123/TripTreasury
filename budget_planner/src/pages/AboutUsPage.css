@@ -1,28 +1,32 @@
 .container {
-    display: grid;
-    place-items: center;
-    height: 100vh;
-  }
-  
-  /* Add grid for the content */
-  .content {
-    max-width: 600px; /* Adjust the width as needed */
-    text-align: center;
-  }
-  
-  /* Style the content if needed */
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  p {
-    margin-bottom: 15px;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.content {
+  text-align: center;
+  border-width: thick;
+}
+
+/* Style the content if needed */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+img {
+  place-items: center;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style-type: style type none;
+  color: black;
+  padding: 0;
+  margin: 0;
+}
   
