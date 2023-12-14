@@ -16,6 +16,8 @@
 .card-image{
   height: 3cm;
   border-radius: 50px;
+  width: 50%;
+  object-fit: cover;
 }
 
 html {
