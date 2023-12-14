@@ -13,6 +13,11 @@
   border-radius: 50px;
 }
 
+.card-image{
+  height: 3cm;
+  border-radius: 50px;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -42,4 +47,9 @@ html {
   padding: 25px;
   text-align: center;
   background-color: #f0f3bd;
+}
+
+.margin{
+  margin-left: 7cm;
+  margin-right: 7cm;
 }

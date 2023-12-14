@@ -11,7 +11,7 @@ function InspirePage() {
     return (
         <>
         <Heading Heading="Holiday Inspirations"></Heading>
-        <h1>Inspiring Holiday Destinations</h1>
+        <h1 className="heading">Inspiring Holiday Destinations</h1>
   
   <div class="destination">
     <img src={dubai} alt="Dubai"/>
@@ -38,7 +38,5 @@ function InspirePage() {
     </>
     );
 }
-
-
 
 export default InspirePage;
