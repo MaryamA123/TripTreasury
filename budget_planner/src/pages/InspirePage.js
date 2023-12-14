@@ -4,6 +4,7 @@ import dubai from "../Images/dubai.jpeg";
 import thailand from "../Images/Thailand.jpeg";
 import bali from "../Images/Bali.jpeg";
 import "./InspirePage.css"
+import makeApiCall from "../services/api";
 
 
 const InspirePage = () => {
@@ -17,21 +18,21 @@ const InspirePage = () => {
 
       <div className="row">
 
-      <div className="column">
+      <div className="columnIP">
         <img src={dubai} alt="Dubai" className="destination-image" />
         <h2>Dubai</h2>
         <p>Experience luxury and extravagance in the heart of the desert.</p>
         <h3>Currency Conversion:</h3>
       </div>
 
-      <div className="column">
+      <div className="columnIP">
         <img src={thailand} alt="Thailand" className="destination-image" />
         <h2>Thailand</h2>
         <p>Discover breathtaking beaches and vibrant cultural experiences.</p>
         <h3>Currency Conversion:</h3>
       </div>
 
-      <div className="column">
+      <div className="columnIP">
         <img src={bali} alt="Bali" className="destination-image" />
         <h2>Bali</h2>
         <p>Immerse yourself in stunning landscapes and tranquil spirituality.</p>
