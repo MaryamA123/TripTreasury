@@ -1,32 +1,45 @@
-.container {
-  display: grid;
-  place-items: center;
-  height: 100vh;
-}
-
-.content {
+.intro-section{
+  padding: 25px;
   text-align: center;
-  border-width: thick;
+  background-color: #028090;
+  color: white;
 }
 
-/* Style the content if needed */
-h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+.pineapple-image{
+  width: 30%; 
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Center horizontally */
+  margin: 0 auto; /* Center horizontally */
+  border-radius: 50px;
 }
 
-img {
-  place-items: center;
+html {
+  box-sizing: border-box;
 }
 
-p {
-  margin-bottom: 15px;
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-ul {
-  list-style-type: style type none;
-  color: black;
-  padding: 0;
-  margin: 0;
+.column {
+  float: left;
+  width: 25%;
+  margin-bottom: 16px;
+  padding: 0 8px;
 }
-  
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  text-align: center;
+}
+
+.row{
+ margin: 8px; 
+}
+
+.ending{
+  padding: 25px;
+  text-align: center;
+  background-color: #f0f3bd;
+}
