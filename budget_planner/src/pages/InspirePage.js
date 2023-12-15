@@ -23,6 +23,7 @@ const InspirePage = () => {
         <h2>Dubai</h2>
         <p>Experience luxury and extravagance in the heart of the desert.</p>
         <h3>Currency Conversion:</h3>
+        <p>£1 is equal to 4.69 AED</p>
       </div>
 
       <div className="columnIP">
@@ -38,6 +39,7 @@ const InspirePage = () => {
         <h2>Bali</h2>
         <p>Immerse yourself in stunning landscapes and tranquil spirituality.</p>
         <h3>Currency Conversion:</h3>
+        <p>£1 is equal to 19,782 IDR</p>
       </div>
     </div>
       <Footer></Footer>

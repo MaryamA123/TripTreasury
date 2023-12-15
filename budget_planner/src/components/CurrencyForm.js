@@ -14,7 +14,7 @@ const CurrencyForm = () => {
   const [dailyBudget, setDailyBudget] = useState(null);
   const [exchangeRate, setExchangeRate] = useState(null);
 
-  const apiKey = "fca_live_dxIYuhTXOQFtljZCfSXinVRkl11qqPzSwTh9HNGP";
+  const apiKey = process.env.REACT_APP_TripTreasury_APIKey;
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;

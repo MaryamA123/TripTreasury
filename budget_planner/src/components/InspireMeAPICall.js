@@ -6,7 +6,7 @@ const CurrencyConverterInspireMe = () => {
     const [error, setError] = useState(null);
   
     // API key
-    console.log(process.env.REACT_APP_TripTreasury_APIKey);
+    //console.log(process.env.REACT_APP_TripTreasury_APIKey);
     const APIKey = process.env.REACT_APP_TripTreasury_APIKey;
   
     useEffect(() => {
@@ -14,7 +14,7 @@ const CurrencyConverterInspireMe = () => {
       const fetchData = async () => {
         try {
           const result = await makeApiCall(APIKey, 'GBP', 'THB');
-          setExchangeRate(result.exchangeRate);
+          setExchangeRate(result);
         } catch (error) {
           setError('Error fetching data');
           console.log(error);
@@ -23,10 +23,13 @@ const CurrencyConverterInspireMe = () => {
   
       fetchData();
     }, [APIKey]);
+    console.log("Rendering")
+
+    const formattedExchangeRate = exchangeRate ? exchangeRate.toFixed(2) : null;
   
     return (
       <div>
-          <p>£1 is equal to {exchangeRate} THB</p> 
+          <p>£1 is equal to {formattedExchangeRate} THB</p> 
         
       </div>
     );
