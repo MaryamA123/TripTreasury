@@ -4,7 +4,7 @@ import dubai from "../Images/dubai.jpeg";
 import thailand from "../Images/Thailand.jpeg";
 import bali from "../Images/Bali.jpeg";
 import "./InspirePage.css"
-import makeApiCall from "../services/api";
+import CurrencyConverterInspireMe from "../components/InspireMeAPICall";
 
 
 const InspirePage = () => {
@@ -30,6 +30,7 @@ const InspirePage = () => {
         <h2>Thailand</h2>
         <p>Discover breathtaking beaches and vibrant cultural experiences.</p>
         <h3>Currency Conversion:</h3>
+        <CurrencyConverterInspireMe></CurrencyConverterInspireMe>
       </div>
 
       <div className="columnIP">
