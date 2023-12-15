@@ -6,6 +6,9 @@ their budgets for their trips. We aim to create a comprehensive and
 efficient platform that simplifies the process of managing finances whilst
 travelling.
 
+Check out a video recording of the application working here:
+https://www.loom.com/share/f4d643ade3fd4672be39aefde1efb05c?sid=1766be3b-a697-4990-9229-5201c39c3a5d 
+
 
 ## Trip Treasury 
 
