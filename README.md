@@ -20,5 +20,8 @@ travelling.
 
 ## Running the code
 1. With the repository open in VScode
-2. Nagivate into budget_planner and run the command `npm start`, this should start the server on http://localhost:3000/
+2. Get an API Key from the website: https://freecurrencyapi.com
+3. Create a .env file in the folder and add in the following:
+    REACT_APP_TripTreasury_APIKey = "Your API KEY"
+4. Nagivate into budget_planner and run the command `npm start`, this should start the server on http://localhost:3000/
 
