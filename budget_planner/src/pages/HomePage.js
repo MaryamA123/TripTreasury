@@ -5,8 +5,7 @@ import Heading from "../components/Heading";
 import bora from "../Images/bora-bora.jpg"
 import japan from "../Images/Japan.jpg"
 import canada from "../Images/Canada.jpg"
-import "./HomePage.css";
-import 'dotenv/config';
+import "./HomePage.css"
 
 function HomePage() {
   return (
