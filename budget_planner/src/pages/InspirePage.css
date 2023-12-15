@@ -4,8 +4,10 @@ h1 {
   }
 
   .sub-heading{
+    padding: 5px;
     background-color: #028090;
   }
+
   .row{
     align-content: center;
   }
@@ -15,6 +17,7 @@ h1 {
     border-radius: 50px;
     width: 100%; 
     object-fit: cover;
+    margin-top: 20px;
   }
   
   html {
