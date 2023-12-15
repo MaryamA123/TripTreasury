@@ -10,8 +10,6 @@ function makeApiCall(apiKey, fromCurrency, toCurrency) {
     })
     .then(data => {
       var conversionRate = data.data[toCurrency]
-      // console.log(`The conversion for 1${fromCurrency} to ${toCurrency} is: ${result}`);
-      // console.log(conversionRate)
       return conversionRate
     })
     .catch(error => {
@@ -20,8 +18,3 @@ function makeApiCall(apiKey, fromCurrency, toCurrency) {
   }
   export default makeApiCall;
   
-  // const apiKey = 'fca_live_dxIYuhTXOQFtljZCfSXinVRkl11qqPzSwTh9HNGP';
-  // const fromCurrency = 'GBP';
-  // const toCurrency = 'EUR';
-  
-  // makeApiCall(apiKey, fromCurrency, toCurrency);

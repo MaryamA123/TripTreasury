@@ -6,7 +6,7 @@ import Heading from "../components/Heading";
 const ContactPage = () => {
     return (
       <div>
-        <Heading Heading="Contact Us"></Heading>
+        <Heading Heading="Leave us a Message"></Heading>
         <ContactForm/>
         <Footer/>
       </div>

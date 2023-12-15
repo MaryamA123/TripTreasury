@@ -39,6 +39,7 @@ html {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 8px;
   text-align: center;
+  padding: 2px 0 2px 0;
 }
 
 .row{
@@ -46,7 +47,7 @@ html {
 }
 
 .ending{
-  padding: 25px;
+  padding-bottom: 80px;
   text-align: center;
   background-color: #f0f3bd;
 }

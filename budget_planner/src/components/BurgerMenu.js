@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './BurgerMenu.css'; // Import your CSS file for styling
+import './BurgerMenu.css';
 
 const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +27,6 @@ const BurgerMenu = () => {
           <li><Link to="/aboutus" onClick={closeMenu}>About</Link></li>
           <li><Link to="/inspire" onClick={closeMenu}>Inspire</Link></li>
           <li><Link to="/contact" onClick={closeMenu}>Contact</Link></li>
-          {/* Add more links to other pages */}
         </ul>
       </div>
     </div>

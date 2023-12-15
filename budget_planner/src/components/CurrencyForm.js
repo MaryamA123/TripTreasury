@@ -16,6 +16,7 @@ const CurrencyForm = () => {
 
   const apiKey = process.env.REACT_APP_TripTreasury_APIKey;
 
+  //valueAsNumber is used when user inputs data for the amount and totalDays as these need to be of datatype number
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -25,9 +26,10 @@ const CurrencyForm = () => {
     });
   };
 
+  // Parse value as a number or keep it empty if it's ''
   const valueAsNumber = (event) => {
     const value = event.target.value;
-    return value === "" ? "" : Number(value); // Parse value as a number or keep it empty if it's ''
+    return value === "" ? "" : Number(value);
   };
 
   const handleSubmit = (e) => {
@@ -37,6 +39,7 @@ const CurrencyForm = () => {
     calculateAndSetDailyBudget();
   };
 
+  //function used to calculate the daily budget of the duration of the trip
   const calculateAndSetDailyBudget = async () => {
     try {
       const rate = await makeApiCall(
@@ -53,22 +56,23 @@ const CurrencyForm = () => {
       console.error("Error calculating daily budget:", error);
     }
   };
+
+  //function used to get the daily rate from the user inputs
   const dailyRate = async () => {
-  try{
-    const rate = await makeApiCall(
-      apiKey,
-      formData.currency1,
-      formData.currency2
-    );
-    if (rate !== undefined){
-      const currentRate = rate.toFixed(2)
-      setExchangeRate(currentRate);
-    } 
-    else{
-      console.log("Error: Conversion rate is undefined")
-    }
-   } catch(error){
-      console.error("Error getting conversion rate:", error)
+    try {
+      const rate = await makeApiCall(
+        apiKey,
+        formData.currency1,
+        formData.currency2
+      );
+      if (rate !== undefined) {
+        const currentRate = rate.toFixed(2);
+        setExchangeRate(currentRate);
+      } else {
+        console.log("Error: Conversion rate is undefined");
+      }
+    } catch (error) {
+      console.error("Error getting conversion rate:", error);
     }
   };
 
@@ -149,10 +153,13 @@ const CurrencyForm = () => {
       {showDailyBudget && dailyBudget && exchangeRate !== null && (
         <div className="dailyBudget">
           <h3>
-            The current conversion rate is 1.00 { formData.currency1} to {exchangeRate} {formData.currency2}.
-            <br /><br/>
-            Your daily budget is {dailyBudget} {formData.currency2}.<br /><br/>
-            Have a wonderful trip and safe travels! 
+            The current conversion rate is 1.00 {formData.currency1} to{" "}
+            {exchangeRate} {formData.currency2}.
+            <br />
+            <br />
+            Your daily budget is {dailyBudget} {formData.currency2}.<br />
+            <br />
+            Have a wonderful trip and safe travels!
           </h3>
         </div>
       )}
