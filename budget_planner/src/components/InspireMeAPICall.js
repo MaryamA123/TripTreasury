@@ -6,7 +6,7 @@ const CurrencyConverterInspireMe = () => {
     const [error, setError] = useState(null);
   
     // API key
-    console.log(process.env.REACT_APP_TripTreasury_APIKey);
+    //console.log(process.env.REACT_APP_TripTreasury_APIKey);
     const APIKey = process.env.REACT_APP_TripTreasury_APIKey;
   
     useEffect(() => {
