@@ -1,0 +1,18 @@
+.heading{
+    background-color: #05668d;
+    font-family: 'bangers';
+}
+
+.logoWithText{
+    display: inline-block;
+}
+
+.logo{
+    height: 80px;
+    vertical-align: middle;
+}
+
+h1{
+    vertical-align: middle;
+    padding-left: 40px;
+}

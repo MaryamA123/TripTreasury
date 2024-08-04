@@ -1,0 +1,50 @@
+.form-inline{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 100%;
+    background-color: #f0f3bd;;
+    border: 1px solid #05668d;
+    height: 5rem;
+}
+.form-group{
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+label{
+    padding-right: 5px;
+    margin: auto;
+}
+
+select{
+    width: 75px;
+    height: 25px;
+    margin: auto;
+}
+
+input[type=number]{
+    color: black;
+    border: 1px solid grey;
+    border-radius: 4px;
+    height: 7px;
+    width: 50px;
+    margin: auto;
+}
+
+.submitButton{
+    background-color: #00A896;
+    border-radius: 4px;
+    margin: auto;
+}
+
+.submitButton:hover{
+    background-color:  #02c39a ;
+}
+
+.dailyBudget{
+    padding: 20px;
+    text-align: center;
+}

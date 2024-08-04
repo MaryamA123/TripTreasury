@@ -1,0 +1,17 @@
+
+.imageContainer{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.holidayImages{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 32%;
+    border-radius: 5%;
+}
+
+h3{
+   text-align: center;
+}
